@@ -1,617 +1,607 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Revive Cohort — Integrative Wellness Program | ReviveWell</title>
-<meta name="description" content="A 6 or 12-month physician-led integrative wellness cohort. Functional labs, peptide therapy (GLP-1, NAD+, glutathione), and personalized protocols built around gut, sleep, and energy. 8–12 founding members." />
-<meta property="og:title" content="The Revive Cohort — Integrative Wellness Program" />
-<meta property="og:description" content="A physician-led 6 or 12-month integrative wellness cohort. Functional labs, peptides, and protocols for gut, sleep, and energy. 8–12 founding spots." />
-<meta property="og:type" content="website" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<meta name="description" content="A 6-month physician-led integrative wellness cohort. Six modules, functional labs, and personalized protocols — delivered with weekly cohort support and 1:1 provider time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#f5f1ea;
-    --bg-2:#efe7da;
-    --ink:#1c2a23;
-    --ink-2:#3a4a40;
-    --moss:#4a6b53;
-    --moss-deep:#2f4a37;
-    --accent:#c8794a;
-    --accent-2:#e8b894;
-    --line:#d8cdb8;
-    --card:#fbf8f1;
-    --shadow:0 1px 2px rgba(28,42,35,.04), 0 8px 32px rgba(28,42,35,.08);
+    --cream:#F5F0E3;
+    --cream-2:#EFE8D6;
+    --charcoal:#262922;
+    --charcoal-soft:#4A4E42;
+    --sage:#5C6E4E;
+    --sage-deep:#3B4A31;
+    --sage-tint:#E4E6D6;
+    --gold:#A9812F;
+    --white:#FFFEFB;
+    --line:rgba(38,41,34,0.14);
+    --serif:'Fraunces', serif;
+    --sans:'Public Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --maxw:1120px;
   }
-  *{box-sizing:border-box}
-  html,body{margin:0;padding:0}
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
   body{
-    font-family:'Inter',system-ui,-apple-system,sans-serif;
-    background:var(--bg);
-    color:var(--ink);
+    margin:0;
+    background:var(--cream);
+    color:var(--charcoal);
+    font-family:var(--sans);
+    font-size:17px;
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
   }
-  h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:500;letter-spacing:-.02em;line-height:1.15;color:var(--moss-deep)}
-  h1{font-size:clamp(2.4rem,5.5vw,4.4rem);margin:0 0 1rem}
-  h2{font-size:clamp(1.8rem,3.5vw,2.8rem);margin:0 0 1rem}
-  h3{font-size:clamp(1.2rem,2vw,1.5rem);margin:0 0 .5rem}
-  p{margin:0 0 1rem;color:var(--ink-2)}
-  a{color:var(--moss-deep);text-decoration:none}
-  .container{max-width:1180px;margin:0 auto;padding:0 1.5rem}
-  .container-narrow{max-width:780px;margin:0 auto;padding:0 1.5rem}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+  @media (max-width:640px){.wrap{padding:0 20px;}}
 
-  /* Nav */
-  nav{
-    position:sticky;top:0;z-index:50;background:rgba(245,241,234,.92);
-    backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
+  h1,h2,h3{font-family:var(--serif);color:var(--charcoal);margin:0;font-weight:600;}
+  h1{font-size:clamp(2.4rem,4.6vw,3.7rem);line-height:1.08;letter-spacing:-0.01em;}
+  h2{font-size:clamp(1.9rem,3.2vw,2.6rem);line-height:1.15;letter-spacing:-0.01em;}
+  h3{font-size:1.3rem;}
+  p{margin:0 0 1em;}
+  .measure{max-width:56ch;}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:40;
+    background:rgba(245,240,227,0.92);
+    backdrop-filter:saturate(140%) blur(8px);
+    border-bottom:1px solid var(--line);
   }
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;max-width:1180px;margin:0 auto}
-  .logo{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:600;color:var(--moss-deep);letter-spacing:-.01em}
-  .nav-links{display:flex;gap:2rem;font-size:.92rem}
-  .nav-links a{color:var(--ink-2);font-weight:500}
-  .nav-links a:hover{color:var(--accent)}
-  .nav-cta{background:var(--moss-deep);color:#fbf8f1!important;padding:.55rem 1.1rem;border-radius:999px;font-weight:500;font-size:.88rem;transition:transform .2s}
-  .nav-cta:hover{transform:translateY(-1px);background:var(--accent)}
-  @media(max-width:760px){.nav-links a:not(.nav-cta){display:none}}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:var(--maxw);margin:0 auto;}
+  .brand{font-family:var(--serif);font-weight:600;font-size:1.15rem;letter-spacing:-0.01em;text-decoration:none;}
+  .nav-links{display:flex;gap:34px;align-items:center;list-style:none;margin:0;padding:0;}
+  .nav-links a{text-decoration:none;font-size:0.95rem;color:var(--charcoal-soft);}
+  .nav-links a:hover{color:var(--sage-deep);}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:var(--sans);font-weight:600;font-size:0.95rem;
+    padding:12px 22px;border-radius:3px;text-decoration:none;
+    border:1px solid transparent;cursor:pointer;
+  }
+  .btn-primary{background:var(--sage-deep);color:var(--white);}
+  .btn-primary:hover{background:var(--charcoal);}
+  .btn-ghost{background:transparent;color:var(--charcoal);border-color:var(--line);}
+  .btn-ghost:hover{border-color:var(--charcoal);}
+  .nav-cta{padding:10px 18px;font-size:0.9rem;}
+  .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;}
+  .menu-toggle span{display:block;width:22px;height:2px;background:var(--charcoal);margin:5px 0;}
+  @media (max-width:820px){
+    .nav-links{display:none;}
+    .menu-toggle{display:block;}
+    .nav-links.open{
+      display:flex;flex-direction:column;gap:0;position:absolute;top:100%;left:0;right:0;
+      background:var(--cream);border-bottom:1px solid var(--line);padding:8px 32px 20px;
+    }
+    .nav-links.open a{padding:12px 0;border-bottom:1px solid var(--line);}
+  }
 
   /* Hero */
-  .hero{padding:5rem 0 4rem;position:relative;overflow:hidden}
-  .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:2.5rem}}
+  .hero{padding:76px 0 64px;}
+  .hero-grid{display:grid;grid-template-columns:1.35fr 0.85fr;gap:64px;align-items:center;}
+  @media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:44px;}}
   .badge{
-    display:inline-flex;align-items:center;gap:.5rem;
-    background:var(--bg-2);border:1px solid var(--line);
-    padding:.4rem .9rem;border-radius:999px;
-    font-size:.78rem;font-weight:500;color:var(--moss-deep);
-    margin-bottom:1.5rem;text-transform:uppercase;letter-spacing:.08em;
+    display:inline-block;font-size:0.85rem;color:var(--sage-deep);
+    border:1px solid var(--sage);border-radius:999px;padding:5px 14px;margin-bottom:22px;
+    font-weight:600;
   }
-  .badge .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite}
-  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-  .hero h1 em{font-style:italic;color:var(--accent);font-weight:400}
-  .hero-sub{font-size:1.15rem;max-width:540px;margin-bottom:2rem}
-  .cta-row{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
-  .btn{
-    display:inline-flex;align-items:center;gap:.6rem;
-    padding:.95rem 1.7rem;border-radius:999px;font-weight:500;font-size:.98rem;
-    transition:all .2s;cursor:pointer;border:none;font-family:inherit;
+  .hero h1{margin-bottom:20px;}
+  .hero h1 em{font-style:italic;color:var(--sage-deep);}
+  .hero-sub{font-size:1.1rem;color:var(--charcoal-soft);margin-bottom:30px;}
+  .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:20px;}
+  .hero-fine{font-size:0.88rem;color:var(--charcoal-soft);}
+
+  .hero-figure{
+    background:var(--sage-deep);color:var(--cream);border-radius:6px;
+    padding:44px 36px;text-align:center;position:relative;
   }
-  .btn-primary{background:var(--moss-deep);color:#fbf8f1}
-  .btn-primary:hover{background:var(--accent);transform:translateY(-1px);box-shadow:var(--shadow)}
-  .btn-ghost{background:transparent;color:var(--moss-deep);border:1px solid var(--moss-deep)}
-  .btn-ghost:hover{background:var(--moss-deep);color:#fbf8f1}
-  .hero-stats{display:flex;gap:2.5rem;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--line)}
-  .stat strong{display:block;font-family:'Fraunces',serif;font-size:1.8rem;color:var(--moss-deep);font-weight:600}
-  .stat span{font-size:.82rem;color:var(--ink-2);text-transform:uppercase;letter-spacing:.05em}
-
-  .hero-visual{position:relative;aspect-ratio:4/5;border-radius:24px;overflow:hidden;background:linear-gradient(135deg,#d8d0bb 0%,#c8b896 100%);box-shadow:var(--shadow)}
-  .hero-visual svg{width:100%;height:100%;display:block}
-  .float-card{
-    position:absolute;background:var(--card);border-radius:14px;padding:.9rem 1.1rem;
-    box-shadow:var(--shadow);font-size:.85rem;display:flex;align-items:center;gap:.7rem;
+  .hero-figure .big-num{
+    font-family:var(--serif);font-size:6.5rem;line-height:1;font-weight:600;color:var(--white);
   }
-  .fc-1{top:8%;right:-8%}
-  .fc-2{bottom:12%;left:-10%}
-  .fc-icon{width:32px;height:32px;border-radius:50%;background:var(--bg-2);display:grid;place-items:center;color:var(--moss-deep);font-weight:600}
-  .fc-text strong{display:block;color:var(--moss-deep);font-size:.88rem}
-  .fc-text span{color:var(--ink-2);font-size:.75rem}
-  @media(max-width:600px){.float-card{display:none}}
+  .hero-figure .num-caption{font-size:1.05rem;margin-top:6px;color:var(--cream-2);}
+  .hero-figure hr{border:none;border-top:1px solid rgba(245,240,227,0.25);margin:26px 0;}
+  .hero-figure .sub-stats{display:flex;justify-content:space-between;font-size:0.85rem;color:var(--cream-2);text-align:left;}
+  .hero-figure .sub-stats div strong{display:block;color:var(--white);font-family:var(--serif);font-size:1.3rem;font-weight:600;}
 
-  /* Marquee / trust */
-  .trust{padding:2rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-2)}
-  .trust-row{display:flex;justify-content:space-around;align-items:center;flex-wrap:wrap;gap:2rem;font-size:.85rem;color:var(--ink-2);text-transform:uppercase;letter-spacing:.1em}
+  .trust-row{
+    display:flex;flex-wrap:wrap;gap:12px 28px;padding-top:36px;margin-top:36px;
+    border-top:1px solid var(--line);font-size:0.9rem;color:var(--charcoal-soft);
+  }
+  .trust-row span::before{content:"— ";color:var(--gold);}
 
-  /* Sections */
-  section{padding:5rem 0}
-  .section-label{display:inline-block;font-size:.8rem;text-transform:uppercase;letter-spacing:.15em;color:var(--accent);font-weight:600;margin-bottom:1rem}
-  .lede{font-size:1.15rem;max-width:680px}
+  /* Section shells */
+  section{padding:88px 0;}
+  section.alt{background:var(--cream-2);}
+  .eyebrow{font-size:0.95rem;color:var(--gold);font-weight:600;margin-bottom:10px;}
+  .section-head{max-width:640px;margin-bottom:56px;}
+  .section-head p{color:var(--charcoal-soft);font-size:1.08rem;margin-top:16px;}
 
   /* Problem */
-  .problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
-  @media(max-width:900px){.problem-grid{grid-template-columns:1fr}}
-  .problem-card{background:var(--card);padding:2rem;border-radius:18px;border:1px solid var(--line)}
-  .problem-card h3{display:flex;align-items:center;gap:.7rem;color:var(--moss-deep)}
-  .problem-card .num{
-    display:grid;place-items:center;width:32px;height:32px;border-radius:50%;
-    background:var(--accent);color:#fff;font-size:.85rem;font-family:'Inter',sans-serif;font-weight:600;
+  .problem-list{display:flex;flex-direction:column;}
+  .problem-row{
+    display:grid;grid-template-columns:80px 1fr;gap:28px;
+    padding:30px 0;border-top:1px solid var(--line);
   }
+  .problem-row:last-child{border-bottom:1px solid var(--line);}
+  .problem-row .pnum{font-family:var(--serif);font-size:1.8rem;color:var(--gold);font-weight:600;}
+  .problem-row h3{margin-bottom:8px;}
+  .problem-row p{color:var(--charcoal-soft);margin:0;max-width:62ch;}
 
-  /* Pillars */
-  .pillars{background:var(--moss-deep);color:#f5f1ea}
-  .pillars h2{color:#f5f1ea}
-  .pillars p{color:#d8cdb8}
-  .pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:3rem}
-  @media(max-width:900px){.pillar-grid{grid-template-columns:1fr}}
-  .pillar{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:2rem;border-radius:18px;backdrop-filter:blur(10px)}
-  .pillar-icon{width:48px;height:48px;border-radius:12px;background:var(--accent);display:grid;place-items:center;margin-bottom:1.2rem}
-  .pillar h3{color:#f5f1ea;font-size:1.4rem}
-  .pillar ul{list-style:none;padding:0;margin:1rem 0 0;font-size:.92rem;color:#d8cdb8}
-  .pillar ul li{padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;gap:.6rem}
-  .pillar ul li:last-child{border-bottom:none}
-  .pillar ul li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--accent-2);flex-shrink:0}
-
-  /* What's Inside */
-  .inside{background:var(--bg)}
-  .inside-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:4rem;align-items:start;margin-top:3rem}
-  @media(max-width:900px){.inside-grid{grid-template-columns:1fr;gap:2rem}}
-  .inside-list{list-style:none;padding:0;margin:0}
-  .inside-list li{padding:1.2rem 0;border-bottom:1px solid var(--line);display:flex;gap:1rem;align-items:flex-start}
-  .inside-list li:last-child{border-bottom:none}
-  .check{width:28px;height:28px;border-radius:50%;background:var(--moss-deep);color:#f5f1ea;display:grid;place-items:center;flex-shrink:0;font-size:.8rem;font-weight:600}
-  .inside-list strong{display:block;color:var(--moss-deep);font-size:1rem;margin-bottom:.2rem}
-  .inside-list span{color:var(--ink-2);font-size:.92rem}
-
-  .timeline{background:var(--card);padding:2rem;border-radius:18px;border:1px solid var(--line);position:sticky;top:6rem}
-  .timeline h4{font-family:'Fraunces',serif;font-size:1.2rem;color:var(--moss-deep);margin:0 0 1.2rem}
-  .phase{display:flex;gap:1rem;padding:.8rem 0;border-bottom:1px dashed var(--line)}
-  .phase:last-child{border-bottom:none}
-  .phase-num{font-family:'Fraunces',serif;font-size:1.4rem;color:var(--accent);font-weight:500;line-height:1;min-width:32px}
-  .phase-name{font-weight:600;color:var(--moss-deep);font-size:.95rem;display:block;margin-bottom:.1rem}
-  .phase-desc{font-size:.85rem;color:var(--ink-2)}
-
-  /* Pricing */
-  .pricing{background:var(--bg-2)}
-  .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem}
-  @media(max-width:760px){.price-grid{grid-template-columns:1fr}}
-  .price-card{
-    background:var(--card);padding:2.5rem;border-radius:20px;border:1px solid var(--line);
-    position:relative;display:flex;flex-direction:column;
+  /* Modules timeline */
+  .timeline{position:relative;}
+  .timeline::before{
+    content:"";position:absolute;left:29px;top:8px;bottom:8px;width:1px;background:var(--line);
   }
-  .price-card.featured{border:2px solid var(--moss-deep);background:#fbf8f1}
-  .featured-tag{
-    position:absolute;top:-12px;right:2rem;background:var(--accent);color:#fff;
-    padding:.3rem .9rem;border-radius:999px;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;
+  @media (max-width:640px){.timeline::before{left:21px;}}
+  .module{display:grid;grid-template-columns:60px 1fr;gap:28px;padding-bottom:52px;position:relative;}
+  @media (max-width:640px){.module{grid-template-columns:44px 1fr;gap:18px;}}
+  .module:last-child{padding-bottom:0;}
+  .module .mnum{
+    width:60px;height:60px;border-radius:50%;background:var(--white);border:1px solid var(--sage);
+    display:flex;align-items:center;justify-content:center;font-family:var(--serif);
+    font-size:1.2rem;font-weight:600;color:var(--sage-deep);z-index:1;
   }
-  .price-card h3{font-size:1.6rem}
-  .price-tier{font-size:.85rem;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem;font-weight:600}
-  .price-num{font-family:'Fraunces',serif;font-size:2.6rem;color:var(--moss-deep);font-weight:600;margin:1rem 0 .3rem;line-height:1}
-  .price-sub{color:var(--ink-2);font-size:.9rem;margin-bottom:1.5rem}
-  .price-features{list-style:none;padding:0;margin:1.5rem 0;flex-grow:1}
-  .price-features li{padding:.5rem 0;display:flex;align-items:flex-start;gap:.6rem;font-size:.93rem;color:var(--ink-2)}
-  .price-features li::before{content:'✓';color:var(--moss);font-weight:700;flex-shrink:0}
+  @media (max-width:640px){.module .mnum{width:44px;height:44px;font-size:1rem;}}
+  .module-body{padding-top:6px;}
+  .module h3{margin-bottom:6px;}
+  .module .mtag{font-size:0.85rem;color:var(--gold);font-weight:600;margin-bottom:4px;display:block;}
+  .module p.desc{color:var(--charcoal-soft);margin-bottom:14px;max-width:60ch;}
+  .module ul{margin:0;padding-left:20px;color:var(--charcoal-soft);}
+  .module li{margin-bottom:6px;}
+
+  /* Inclusions */
+  .incl-grid{display:grid;grid-template-columns:1fr 1fr;column-gap:56px;}
+  @media (max-width:720px){.incl-grid{grid-template-columns:1fr;}}
+  .incl-item{display:flex;gap:16px;padding:22px 0;border-top:1px solid var(--line);}
+  .incl-item:nth-last-child(-n+2){border-bottom:1px solid var(--line);}
+  @media (max-width:720px){.incl-item:nth-last-child(-n+2){border-bottom:none;} .incl-item:last-child{border-bottom:1px solid var(--line);}}
+  .incl-mark{color:var(--sage-deep);font-family:var(--serif);font-weight:600;font-size:1.1rem;flex-shrink:0;}
+  .incl-item h4{margin:0 0 4px;font-family:var(--sans);font-weight:700;font-size:1rem;}
+  .incl-item p{margin:0;color:var(--charcoal-soft);font-size:0.96rem;}
+
+  .note-box{
+    margin-top:40px;padding:20px 24px;background:var(--sage-tint);border-radius:4px;
+    font-size:0.95rem;color:var(--charcoal-soft);
+  }
 
   /* FAQ */
-  .faq-list{margin-top:3rem;max-width:780px;margin-left:auto;margin-right:auto}
-  details{
-    background:var(--card);border:1px solid var(--line);border-radius:14px;
-    margin-bottom:.7rem;overflow:hidden;transition:all .2s;
+  .faq-item{border-top:1px solid var(--line);}
+  .faq-item:last-child{border-bottom:1px solid var(--line);}
+  .faq-q{
+    width:100%;text-align:left;background:none;border:none;cursor:pointer;
+    padding:22px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;
+    font-family:var(--serif);font-size:1.12rem;color:var(--charcoal);
   }
-  details[open]{border-color:var(--moss);box-shadow:var(--shadow)}
-  summary{padding:1.3rem 1.5rem;cursor:pointer;font-weight:500;color:var(--moss-deep);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center}
-  summary::-webkit-details-marker{display:none}
-  summary::after{content:'+';font-size:1.4rem;color:var(--accent);transition:transform .2s;font-family:'Fraunces',serif;font-weight:300}
-  details[open] summary::after{transform:rotate(45deg)}
-  details > div{padding:0 1.5rem 1.3rem;color:var(--ink-2);font-size:.95rem;line-height:1.7}
+  .faq-q .plus{font-family:var(--sans);font-size:1.4rem;color:var(--gold);flex-shrink:0;transition:transform .2s ease;}
+  .faq-item.open .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease;}
+  .faq-a p{color:var(--charcoal-soft);padding-bottom:22px;max-width:66ch;}
 
-  /* Apply */
-  .apply{background:var(--moss-deep);color:#f5f1ea;text-align:center}
-  .apply h2{color:#f5f1ea;font-size:clamp(2rem,4vw,3.4rem)}
-  .apply p{color:#d8cdb8;font-size:1.1rem;max-width:600px;margin:0 auto 2rem}
-  .apply-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:3rem;max-width:780px;margin-left:auto;margin-right:auto;text-align:left}
-  @media(max-width:760px){.apply-cards{grid-template-columns:1fr}}
-  .apply-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:1.5rem;border-radius:14px}
-  .apply-card .step-num{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-size:.85rem;font-weight:600;margin-bottom:.8rem}
-  .apply-card h4{color:#f5f1ea;font-family:'Inter',sans-serif;font-size:1rem;font-weight:600;margin:0 0 .4rem}
-  .apply-card span{color:#d8cdb8;font-size:.85rem}
+  /* Apply steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-bottom:48px;}
+  @media (max-width:760px){.steps{grid-template-columns:1fr;}}
+  .step .snum{font-family:var(--serif);font-size:2.2rem;color:var(--gold);font-weight:600;margin-bottom:10px;}
+  .step h4{font-family:var(--sans);font-weight:700;margin:0 0 6px;}
+  .step p{color:var(--charcoal-soft);margin:0;font-size:0.96rem;}
+
+  .cta-band{
+    background:var(--sage-deep);color:var(--cream);border-radius:6px;
+    padding:52px 48px;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;
+  }
+  .cta-band h3{color:var(--white);font-size:1.6rem;margin-bottom:8px;}
+  .cta-band p{color:var(--cream-2);margin:0;}
+  .cta-band .btn-primary{background:var(--white);color:var(--sage-deep);}
+  .cta-band .btn-primary:hover{background:var(--gold);color:var(--white);}
 
   /* Waitlist */
-  .waitlist-form{display:flex;gap:.7rem;max-width:480px;margin:2.5rem auto 0;flex-wrap:wrap;justify-content:center}
-  .waitlist-form input{
-    flex:1;min-width:240px;padding:.95rem 1.2rem;border-radius:999px;border:1px solid rgba(255,255,255,.2);
-    background:rgba(255,255,255,.08);color:#f5f1ea;font-family:inherit;font-size:.95rem;
+  .waitlist{
+    margin-top:64px;padding-top:48px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;
   }
-  .waitlist-form input::placeholder{color:rgba(245,241,234,.5)}
-  .waitlist-form input:focus{outline:none;border-color:var(--accent);background:rgba(255,255,255,.12)}
-  .waitlist-form button{background:var(--accent);color:#fff}
-  .waitlist-form button:hover{background:var(--accent-2);color:var(--moss-deep)}
+  .waitlist p{margin:0;color:var(--charcoal-soft);max-width:44ch;}
+  .waitlist h4{font-family:var(--serif);font-size:1.3rem;margin-bottom:6px;}
 
   /* Footer */
-  footer{background:var(--bg);padding:3rem 0 2rem;border-top:1px solid var(--line)}
-  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem;margin-bottom:2rem}
-  @media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr}}
-  .foot-col h5{font-family:'Inter',sans-serif;font-size:.82rem;text-transform:uppercase;letter-spacing:.1em;color:var(--moss-deep);margin:0 0 1rem;font-weight:600}
-  .foot-col a{display:block;color:var(--ink-2);font-size:.9rem;padding:.25rem 0}
-  .foot-col a:hover{color:var(--accent)}
-  .foot-bottom{border-top:1px solid var(--line);padding-top:1.5rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.82rem;color:var(--ink-2)}
-  .disclaimer{max-width:780px;font-size:.78rem;color:var(--ink-2);line-height:1.6;margin:1.5rem 0}
-
-  /* Animations */
-  .fade-in{opacity:0;transform:translateY(20px);transition:opacity .8s ease, transform .8s ease}
-  .fade-in.visible{opacity:1;transform:translateY(0)}
+  footer{background:var(--charcoal);color:var(--cream-2);padding:64px 0 32px;}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:48px;}
+  @media (max-width:700px){.foot-grid{grid-template-columns:1fr;gap:32px;}}
+  footer .brand{color:var(--white);}
+  footer p{color:rgba(245,240,227,0.68);max-width:40ch;}
+  footer h5{font-family:var(--sans);color:var(--white);font-size:0.85rem;margin:0 0 14px;font-weight:700;}
+  footer ul{list-style:none;margin:0;padding:0;}
+  footer li{margin-bottom:10px;}
+  footer a{text-decoration:none;color:rgba(245,240,227,0.75);font-size:0.95rem;}
+  footer a:hover{color:var(--white);}
+  .disclaimer{font-size:0.82rem;color:rgba(245,240,227,0.5);border-top:1px solid rgba(245,240,227,0.15);padding-top:28px;line-height:1.7;}
+  .copyright{font-size:0.82rem;color:rgba(245,240,227,0.4);margin-top:20px;}
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <div class="logo">ReviveWell</div>
-    <div class="nav-links">
-      <a href="#program">Program</a>
-      <a href="#pillars">Pillars</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#faq">FAQ</a>
-      <a href="application.html" class="nav-cta">Apply →</a>
-    </div>
-  </div>
-</nav>
-
-<header class="hero">
-  <div class="container">
-    <div class="hero-grid">
-      <div>
-        <div class="badge"><span class="dot"></span>Founding Cohort · 8–12 spots</div>
-        <h1>Rebuild your <em>energy</em>, sleep, and gut — backed by labs, not guesses.</h1>
-        <p class="hero-sub">A 6 or 12-month physician-led integrative wellness cohort. Functional labs, peptide therapy, and personalized protocols delivered with weekly cohort support and 1:1 provider time.</p>
-        <div class="cta-row">
-          <a href="application.html" class="btn btn-primary">Apply for the cohort →</a>
-          <a href="#program" class="btn btn-ghost">How it works</a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat"><strong>6–12mo</strong><span>Program length</span></div>
-          <div class="stat"><strong>3 pillars</strong><span>Gut · Sleep · Energy</span></div>
-          <div class="stat"><strong>8–12</strong><span>Founding members</span></div>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#4a6b53"/>
-              <stop offset="100%" stop-color="#2f4a37"/>
-            </linearGradient>
-            <radialGradient id="g2" cx="50%" cy="40%" r="60%">
-              <stop offset="0%" stop-color="#e8b894" stop-opacity=".4"/>
-              <stop offset="100%" stop-color="#c8794a" stop-opacity="0"/>
-            </radialGradient>
-          </defs>
-          <rect width="400" height="500" fill="url(#g1)"/>
-          <circle cx="200" cy="200" r="180" fill="url(#g2)"/>
-          <!-- abstract botanical -->
-          <g stroke="#e8b894" stroke-width="1.5" fill="none" opacity=".7">
-            <path d="M 200 480 Q 200 350 200 220" />
-            <path d="M 200 380 Q 150 360 130 320" />
-            <path d="M 200 380 Q 250 360 270 320" />
-            <path d="M 200 320 Q 160 300 145 270" />
-            <path d="M 200 320 Q 240 300 255 270" />
-            <path d="M 200 260 Q 175 245 165 220" />
-            <path d="M 200 260 Q 225 245 235 220" />
-          </g>
-          <g fill="#e8b894" opacity=".8">
-            <ellipse cx="130" cy="320" rx="22" ry="10" transform="rotate(-30 130 320)"/>
-            <ellipse cx="270" cy="320" rx="22" ry="10" transform="rotate(30 270 320)"/>
-            <ellipse cx="145" cy="270" rx="18" ry="8" transform="rotate(-25 145 270)"/>
-            <ellipse cx="255" cy="270" rx="18" ry="8" transform="rotate(25 255 270)"/>
-            <ellipse cx="165" cy="220" rx="14" ry="6" transform="rotate(-20 165 220)"/>
-            <ellipse cx="235" cy="220" rx="14" ry="6" transform="rotate(20 235 220)"/>
-            <circle cx="200" cy="200" r="14"/>
-          </g>
-          <g fill="#f5f1ea" opacity=".5">
-            <circle cx="80" cy="100" r="1.5"/>
-            <circle cx="320" cy="80" r="2"/>
-            <circle cx="350" cy="180" r="1"/>
-            <circle cx="60" cy="220" r="1.5"/>
-            <circle cx="40" cy="380" r="1"/>
-            <circle cx="360" cy="420" r="1.5"/>
-          </g>
-        </svg>
-        <div class="float-card fc-1">
-          <div class="fc-icon">L</div>
-          <div class="fc-text"><strong>Lab-validated</strong><span>GI-MAP · DUTCH · OAT</span></div>
-        </div>
-        <div class="float-card fc-2">
-          <div class="fc-icon">P</div>
-          <div class="fc-text"><strong>Peptide protocols</strong><span>GLP-1 · NAD+ · Glutathione</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
+<header>
+  <nav class="nav">
+    <a class="brand" href="#">ReviveWell</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#modules">Program</a></li>
+      <li><a href="#included">What's included</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a class="btn btn-primary nav-cta" href="application.html">Apply</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
 </header>
 
-<section class="trust">
-  <div class="container">
-    <div class="trust-row">
-      <span>Physician-led</span>
-      <span>HIPAA-compliant</span>
-      <span>HSA / FSA eligible</span>
-      <span>Founding cohort 2026</span>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="badge">Founding Cohort · 8–12 spots</span>
+      <h1>Rebuild your <em>energy</em>, sleep, and gut — backed by labs, not guesses.</h1>
+      <p class="hero-sub">A 6-month physician-led integrative wellness cohort, built as six connected modules — functional labs, peptide therapy, and personalized protocols, delivered with weekly cohort support and 1:1 provider time.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="application.html">Apply for the cohort</a>
+        <a class="btn btn-ghost" href="#modules">See the six modules</a>
+      </div>
+      <p class="hero-fine">Program details, including investment, are shared on your discovery call.</p>
+      <div class="trust-row">
+        <span>Physician-led</span>
+        <span>HIPAA-compliant</span>
+        <span>HSA / FSA eligible</span>
+        <span>Founding cohort, 2026</span>
+      </div>
+    </div>
+    <div class="hero-figure">
+      <div class="big-num">6</div>
+      <div class="num-caption">months, six modules, one system</div>
+      <hr>
+      <div class="sub-stats">
+        <div><strong>GI-MAP</strong>DUTCH · OAT</div>
+        <div><strong>8–12</strong>founding members</div>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="problem">
-  <div class="container">
-    <span class="section-label">The Problem</span>
-    <h2>You've tried everything. The labs say "normal." You still feel off.</h2>
-    <p class="lede">Conventional medicine treats numbers in isolation. The cohort treats the whole picture — gut, sleep, hormones, mitochondria — using the labs and protocols that find what standard panels miss.</p>
-    <div class="problem-grid">
-      <div class="problem-card">
-        <h3><span class="num">1</span>Energy that won't return</h3>
-        <p>Sleeping 8 hours and still tired. Coffee stops working. Workouts wreck you for days. Cortisol, mitochondria, and thyroid often need targeted support — and standard TSH won't catch it.</p>
-      </div>
-      <div class="problem-card">
-        <h3><span class="num">2</span>A gut that runs the show</h3>
-        <p>Bloating, irregularity, food sensitivities, brain fog. When the microbiome is dysregulated, every other system pays the cost. We map it with GI-MAP and rebuild it in phases.</p>
-      </div>
-      <div class="problem-card">
-        <h3><span class="num">3</span>Sleep that doesn't restore</h3>
-        <p>Falling asleep is one thing. Staying in deep, restorative sleep is another. Hormones, blood sugar, nervous system — when they're off, the body never gets to repair.</p>
-      </div>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The problem</span>
+      <h2>You've tried everything. The labs say "normal." You still feel off.</h2>
+      <p>Conventional medicine treats numbers in isolation. The cohort treats the whole picture — gut, sleep, hormones, mitochondria — using the labs and protocols that find what standard panels miss.</p>
     </div>
-  </div>
-</section>
-
-<section id="pillars" class="pillars">
-  <div class="container">
-    <span class="section-label" style="color:var(--accent-2)">Three Pillars · One Cohort</span>
-    <h2>Built around the systems most people ignore — until they have to.</h2>
-    <p class="lede">Every protocol is layered to support the next. Gut comes first because nothing else absorbs without it. Sleep comes next because nothing repairs without it. Energy is the outcome of doing those two right.</p>
-    <div class="pillar-grid">
-      <div class="pillar">
-        <div class="pillar-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 10v6m11-11h-6m-10 0H1"/></svg>
+    <div class="problem-list">
+      <div class="problem-row">
+        <div class="pnum">01</div>
+        <div>
+          <h3>Energy that won't return</h3>
+          <p>Sleeping eight hours and still tired. Coffee stops working. Workouts wreck you for days. Cortisol, mitochondria, and thyroid often need targeted support — and a standard TSH won't catch it.</p>
         </div>
-        <h3>Gut</h3>
-        <p style="color:#d8cdb8;font-size:.95rem">Map the microbiome. Reduce inflammation. Rebuild the lining.</p>
-        <ul>
-          <li>GI-MAP comprehensive stool analysis</li>
-          <li>5R protocol (Remove, Replace, Reinoculate, Repair, Rebalance)</li>
-          <li>GLP-2 peptide support where indicated</li>
-          <li>Targeted antimicrobial / probiotic phasing</li>
-          <li>Food reintroduction roadmap</li>
-        </ul>
       </div>
-      <div class="pillar">
-        <div class="pillar-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <div class="problem-row">
+        <div class="pnum">02</div>
+        <div>
+          <h3>A gut that runs the show</h3>
+          <p>Bloating, irregularity, food sensitivities, brain fog. When the microbiome is dysregulated, every other system pays the cost. We map it with GI-MAP and rebuild it in phases.</p>
         </div>
-        <h3>Sleep</h3>
-        <p style="color:#d8cdb8;font-size:.95rem">Track the signal. Tune the inputs. Restore deep sleep.</p>
-        <ul>
-          <li>Wearable data integration (Oura · WHOOP · 8sleep)</li>
-          <li>Cortisol rhythm via DUTCH testing</li>
-          <li>Light, temperature, glucose protocols</li>
-          <li>Targeted nutraceuticals (Mg-glycinate, glycine, l-theanine)</li>
-          <li>Hormone optimization layer (12-mo track)</li>
-        </ul>
       </div>
-      <div class="pillar">
-        <div class="pillar-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      <div class="problem-row">
+        <div class="pnum">03</div>
+        <div>
+          <h3>Sleep that doesn't restore</h3>
+          <p>Falling asleep is one thing. Staying in deep, restorative sleep is another. Hormones, blood sugar, and the nervous system — when they're off, the body never gets to repair.</p>
         </div>
-        <h3>Energy</h3>
-        <p style="color:#d8cdb8;font-size:.95rem">Mitochondrial repair. Metabolic flexibility. Real, sustainable drive.</p>
-        <ul>
-          <li>OAT (Organic Acids) for mitochondrial markers</li>
-          <li>NAD+ protocol — IV/IM/oral pathway</li>
-          <li>Glutathione support for detox capacity</li>
-          <li>GLP-1 metabolic support where appropriate</li>
-          <li>Movement, fueling, and recovery framework</li>
-        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section id="program" class="inside">
-  <div class="container">
-    <span class="section-label">What's Inside</span>
-    <h2>Everything you need. Nothing you don't.</h2>
-    <p class="lede">A real program — not a course, not a coaching call, not a supplement subscription. Provider-led care delivered in cohort format so you get the benefits of community plus 1:1 attention.</p>
-    <div class="inside-grid">
-      <ul class="inside-list">
-        <li><div class="check">✓</div><div><strong>Comprehensive baseline labs</strong><span>GI-MAP, DUTCH, OAT, micronutrient, full metabolic, inflammation markers, hormones — included.</span></div></li>
-        <li><div class="check">✓</div><div><strong>Personalized supplement protocol</strong><span>Built from your lab data. Adjusted at every retest. Pharmacy-grade through partner discount.</span></div></li>
-        <li><div class="check">✓</div><div><strong>Peptide screening &amp; prescription path</strong><span>GLP-1, GLP-2, NAD+, glutathione — physician evaluation, licensed compounding pharmacy, ongoing monitoring.</span></div></li>
-        <li><div class="check">✓</div><div><strong>Weekly cohort calls</strong><span>Live teaching, Q&amp;A, group accountability. Recordings posted in the private workspace.</span></div></li>
-        <li><div class="check">✓</div><div><strong>1:1 provider visits</strong><span>4 visits in 6-month, 8 visits in 12-month. Plus async messaging.</span></div></li>
-        <li><div class="check">✓</div><div><strong>Private cohort community</strong><span>Notion + secure messaging. Curriculum, protocols, and peer support — all in one place.</span></div></li>
-        <li><div class="check">✓</div><div><strong>Outcome tracking dashboard</strong><span>See your gut, sleep, and energy markers move over the program.</span></div></li>
-      </ul>
-      <div class="timeline">
-        <h4>The four-phase journey</h4>
-        <div class="phase"><div class="phase-num">01</div><div><span class="phase-name">Discovery</span><span class="phase-desc">Onboarding, baseline labs, comprehensive intake</span></div></div>
-        <div class="phase"><div class="phase-num">02</div><div><span class="phase-name">Foundation</span><span class="phase-desc">Gut repair, sleep architecture, supplement layer</span></div></div>
-        <div class="phase"><div class="phase-num">03</div><div><span class="phase-name">Activation</span><span class="phase-desc">Peptide protocols, energy systems, mid-program retest</span></div></div>
-        <div class="phase"><div class="phase-num">04</div><div><span class="phase-name">Integration</span><span class="phase-desc">Sustainability, exit labs, maintenance plan</span></div></div>
+<section class="alt" id="modules">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The six-month arc</span>
+      <h2>Six modules. Each one builds on the last.</h2>
+      <p>The program moves in a deliberate order: foundation first, then the systems that depend on it, then the mindset work that makes any of it stick, then a plan to sustain what you've built.</p>
+    </div>
+    <div class="timeline">
+
+      <div class="module">
+        <div class="mnum">01</div>
+        <div class="module-body">
+          <span class="mtag">Foundation</span>
+          <h3>Lifestyle Habits</h3>
+          <p class="desc">Your baseline, mapped in full before anything else changes.</p>
+          <ul>
+            <li>Comprehensive intake and habit audit</li>
+            <li>Baseline labs: GI-MAP, DUTCH, OAT, full metabolic panel</li>
+            <li>Cohort onboarding and private community access</li>
+          </ul>
+        </div>
       </div>
+
+      <div class="module">
+        <div class="mnum">02</div>
+        <div class="module-body">
+          <span class="mtag">Restoration</span>
+          <h3>Sleep</h3>
+          <p class="desc">Nothing repairs without it, so it comes early.</p>
+          <ul>
+            <li>Wearable data integration (Oura · WHOOP · 8sleep)</li>
+            <li>Cortisol rhythm review via DUTCH testing</li>
+            <li>Light, temperature, and glucose protocols</li>
+            <li>Targeted nutraceuticals: magnesium glycinate, glycine, l-theanine</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module">
+        <div class="mnum">03</div>
+        <div class="module-body">
+          <span class="mtag">Repair</span>
+          <h3>Gut</h3>
+          <p class="desc">Nothing else absorbs — nutrients, protocols, or progress — until this is working.</p>
+          <ul>
+            <li>GI-MAP results review and 5R protocol (Remove, Replace, Reinoculate, Repair, Rebalance)</li>
+            <li>GLP-2 peptide support where indicated</li>
+            <li>Targeted antimicrobial and probiotic phasing</li>
+            <li>Guided food reintroduction roadmap</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module">
+        <div class="mnum">04</div>
+        <div class="module-body">
+          <span class="mtag">Activation</span>
+          <h3>Energy</h3>
+          <p class="desc">The outcome of doing sleep and gut right — with direct support underneath it.</p>
+          <ul>
+            <li>OAT (organic acids) for mitochondrial markers</li>
+            <li>NAD+ protocol via IV, IM, or oral pathway</li>
+            <li>Glutathione support for detox capacity</li>
+            <li>GLP-1 metabolic support where appropriate</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module">
+        <div class="mnum">05</div>
+        <div class="module-body">
+          <span class="mtag">Integration</span>
+          <h3>Mindset, Mindfulness &amp; Emotional Regulation</h3>
+          <p class="desc">The labs and protocols hold better when the nervous system is part of the plan.</p>
+          <ul>
+            <li>Nervous system regulation practices</li>
+            <li>The stress–cortisol connection, made practical</li>
+            <li>Mindfulness and grounding tools for daily use</li>
+            <li>Working with emotional eating and behavior patterns</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module">
+        <div class="mnum">06</div>
+        <div class="module-body">
+          <span class="mtag">Sustainability</span>
+          <h3>Optimization &amp; Sustainability</h3>
+          <p class="desc">A plan for keeping what you built, without the cohort's daily structure.</p>
+          <ul>
+            <li>Exit labs and full progress retest</li>
+            <li>Protocol refinement based on your results</li>
+            <li>Supplement and peptide tapering plan</li>
+            <li>Long-term maintenance plan and alumni community access</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<section id="pricing" class="pricing">
-  <div class="container">
-    <span class="section-label">Founding Cohort Pricing</span>
-    <h2>Two tracks. Both physician-led. Founding rates locked.</h2>
-    <p class="lede">Founding cohort pricing is ~25% below standard rates and never increases for renewals. Pay-in-full, 3-pay, or monthly options available.</p>
-    <div class="price-grid">
-      <div class="price-card">
-        <div class="price-tier">Reset · 6 Months</div>
-        <h3>The 6-Month Track</h3>
-        <div class="price-num">$4,500<span style="font-size:1rem;color:var(--ink-2)"> – $5,500</span></div>
-        <div class="price-sub">One-time, payment plans available · HSA/FSA eligible</div>
-        <ul class="price-features">
-          <li>Comprehensive baseline + exit labs</li>
-          <li>Personalized supplement protocol</li>
-          <li>Peptide path (if indicated)</li>
-          <li>Weekly cohort calls (24 weeks)</li>
-          <li>4 × 1:1 provider visits</li>
-          <li>Private community access</li>
-          <li>Outcome tracking dashboard</li>
-        </ul>
-        <a href="application.html" class="btn btn-ghost" style="justify-content:center">Apply for 6-month →</a>
+<section id="included">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What's inside</span>
+      <h2>Everything you need. Nothing you don't.</h2>
+      <p>A real program — not a course, not a coaching call, not a supplement subscription. Provider-led care delivered in cohort format, so you get the benefits of community plus 1:1 attention.</p>
+    </div>
+    <div class="incl-grid">
+      <div class="incl-item">
+        <span class="incl-mark">＋</span>
+        <div><h4>Comprehensive labs</h4><p>Baseline and exit panels: GI-MAP, DUTCH, OAT, micronutrient, metabolic, inflammation, and hormone markers — included.</p></div>
       </div>
-      <div class="price-card featured">
-        <span class="featured-tag">Most chosen</span>
-        <div class="price-tier">Restore · 12 Months</div>
-        <h3>The 12-Month Track</h3>
-        <div class="price-num">$9,500<span style="font-size:1rem;color:var(--ink-2)"> – $11,500</span></div>
-        <div class="price-sub">One-time, payment plans available · HSA/FSA eligible</div>
-        <ul class="price-features">
-          <li>Everything in the 6-month track</li>
-          <li>Quarterly retesting (4 panels total)</li>
-          <li>Extended peptide cycling protocol</li>
-          <li>Hormone optimization layer</li>
-          <li>8 × 1:1 provider visits</li>
-          <li>Bi-weekly 1:1 cadence + maintenance phase</li>
-          <li>Live retreat day (in-person or virtual)</li>
-        </ul>
-        <a href="application.html" class="btn btn-primary" style="justify-content:center">Apply for 12-month →</a>
+      <div class="incl-item">
+        <span class="incl-mark">＋</span>
+        <div><h4>Personalized supplement protocol</h4><p>Built from your lab data and adjusted at every retest. Pharmacy-grade, through a partner discount.</p></div>
+      </div>
+      <div class="incl-item">
+        <span class="incl-mark">＋</span>
+        <div><h4>Peptide screening &amp; prescription path</h4><p>GLP-1, GLP-2, NAD+, glutathione — physician evaluation, licensed compounding pharmacy, ongoing monitoring.</p></div>
+      </div>
+      <div class="incl-item">
+        <span class="incl-mark">＋</span>
+        <div><h4>Weekly cohort calls</h4><p>Live teaching, Q&amp;A, and group accountability across all six modules. Recordings posted in the private workspace.</p></div>
+      </div>
+      <div class="incl-item">
+        <span class="incl-mark">＋</span>
+        <div><h4>1:1 provider visits</h4><p>Direct visits scheduled through the program, plus async messaging between sessions.</p></div>
+      </div>
+      <div class="incl-item">
+        <span class="incl-mark">＋</span>
+        <div><h4>Private cohort community</h4><p>Curriculum, protocols, and peer support in one place, alongside secure provider messaging.</p></div>
+      </div>
+      <div class="incl-item">
+        <span class="incl-mark">＋</span>
+        <div><h4>Outcome tracking</h4><p>Watch your gut, sleep, and energy markers move across all six modules of the program.</p></div>
+      </div>
+      <div class="incl-item">
+        <span class="incl-mark">＋</span>
+        <div><h4>Module workbooks</h4><p>A guided workbook for each of the six modules, built to be used alongside the weekly calls.</p></div>
       </div>
     </div>
-    <p style="text-align:center;margin-top:2rem;font-size:.88rem;color:var(--ink-2)">Cost of supplements (~$150–$300/mo) and peptides (~$200–$600/mo) not included in program fee. Pharmacy partner discounts apply.</p>
+    <div class="note-box">Supplements (typically $150–$300/mo) and peptides (typically $200–$600/mo), when clinically indicated, are separate from the program and billed through the pharmacy partner at discounted rates.</div>
   </div>
 </section>
 
-<section id="faq">
-  <div class="container-narrow">
-    <span class="section-label" style="display:block;text-align:center">Common Questions</span>
-    <h2 style="text-align:center">Before you apply</h2>
+<section class="alt" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Common questions</span>
+      <h2>Before you apply</h2>
+    </div>
     <div class="faq-list">
-      <details>
-        <summary>Who is this cohort actually for?</summary>
-        <div>High-functioning adults — usually 35–55 — who've hit a wall with conventional care. Common entry points: persistent fatigue, gut issues that won't resolve, sleep that doesn't restore, weight that won't budge, or hormone shifts that aren't being addressed by their primary doctor. You should be willing to do labs, journal data, and engage with the cohort weekly.</div>
-      </details>
-      <details>
-        <summary>Who is this NOT for?</summary>
-        <div>Anyone looking for a quick GLP-1 prescription, a generic supplement subscription, or a "just tell me what to take" experience. We don't treat acute illness, active eating disorders, or anyone currently pregnant or trying to conceive in the program window.</div>
-      </details>
-      <details>
-        <summary>What about peptides — are they safe? Are they legal?</summary>
-        <div>All peptides we prescribe are sourced through licensed compounding pharmacies in the US and require physician evaluation. We follow current regulatory guidance and adjust protocols as that landscape evolves. Not every participant gets every peptide — we screen for clinical fit and monitor closely throughout.</div>
-      </details>
-      <details>
-        <summary>How is this different from a typical functional medicine practice?</summary>
-        <div>Three things. First, cohort format — you get peer support and a structured arc instead of one-off appointments. Second, depth — labs, peptides, supplements, and behavioral protocols are all in one program rather than added piecemeal. Third, accountability — weekly check-ins and tracking mean things actually get done.</div>
-      </details>
-      <details>
-        <summary>Do you accept insurance?</summary>
-        <div>No. Program fees are out-of-pocket but HSA/FSA eligible in most cases. We provide superbills for medical visits where applicable. The pharmacy-grade supplements and peptide protocols are also out-of-pocket but at partner discount rates.</div>
-      </details>
-      <details>
-        <summary>What's the time commitment?</summary>
-        <div>Plan for ~3 hours per week: one cohort call (60–90 min), one shorter learning module, plus daily logging (5–10 min). 1:1 provider visits are scheduled separately. The first two weeks are heavier (intake, labs, baselines).</div>
-      </details>
-      <details>
-        <summary>Can my partner / spouse join too?</summary>
-        <div>If both are accepted, we offer 15% off the second seat. Both must complete the application independently — fit matters.</div>
-      </details>
-      <details>
-        <summary>What states do you currently serve?</summary>
-        <div>Telehealth licensure varies. Most US states are covered. We confirm during the application/discovery call. If we can't serve you clinically, we'll let you know within 48 hours.</div>
-      </details>
-      <details>
-        <summary>What happens if I want to stop?</summary>
-        <div>Full refund within the first 14 days, before labs are processed. After that, you may pause once during the program for up to 30 days. Refunds after labs are processed are pro-rated minus direct lab costs incurred.</div>
-      </details>
+
+      <div class="faq-item">
+        <button class="faq-q"><span>Who is this cohort actually for?</span><span class="plus">+</span></button>
+        <div class="faq-a"><p>High-functioning adults — usually 35–55 — who've hit a wall with conventional care. Common entry points: persistent fatigue, gut issues that won't resolve, sleep that doesn't restore, weight that won't budge, or hormone shifts that aren't being addressed by their primary doctor. You should be willing to do labs, journal data, and engage with the cohort weekly.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q"><span>Who is this NOT for?</span><span class="plus">+</span></button>
+        <div class="faq-a"><p>Anyone looking for a quick GLP-1 prescription, a generic supplement subscription, or a "just tell me what to take" experience. We don't treat acute illness, active eating disorders, or anyone currently pregnant or trying to conceive during the program window.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q"><span>What about peptides — are they safe? Are they legal?</span><span class="plus">+</span></button>
+        <div class="faq-a"><p>All peptides we prescribe are sourced through licensed compounding pharmacies in the US and require physician evaluation. We follow current regulatory guidance and adjust protocols as that landscape evolves. Not every participant gets every peptide — we screen for clinical fit and monitor closely throughout.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q"><span>How is this different from a typical functional medicine practice?</span><span class="plus">+</span></button>
+        <div class="faq-a"><p>Three things. First, cohort format — you get peer support and a structured arc instead of one-off appointments. Second, depth — labs, peptides, supplements, and behavioral protocols are all in one program instead of added piecemeal. Third, accountability — weekly check-ins and tracking mean things actually get done.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q"><span>Do you accept insurance?</span><span class="plus">+</span></button>
+        <div class="faq-a"><p>No. Program fees are out-of-pocket but HSA/FSA eligible in most cases. We provide superbills for medical visits where applicable. Pharmacy-grade supplements and peptide protocols are also out-of-pocket, at partner discount rates.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q"><span>What's the time commitment?</span><span class="plus">+</span></button>
+        <div class="faq-a"><p>Plan for about three hours a week: one cohort call (60–90 minutes), one shorter learning module, plus daily logging (5–10 minutes). 1:1 provider visits are scheduled separately. The first two weeks are heavier, covering intake, labs, and baselines.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q"><span>Can my partner or spouse join too?</span><span class="plus">+</span></button>
+        <div class="faq-a"><p>If both are accepted, we offer a discount on the second seat. Both must complete the application independently — fit matters.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q"><span>What states do you currently serve?</span><span class="plus">+</span></button>
+        <div class="faq-a"><p>Telehealth licensure varies. Most US states are covered. We confirm during the application or discovery call. If we can't serve you clinically, we'll let you know within 48 hours.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q"><span>What happens if I want to stop?</span><span class="plus">+</span></button>
+        <div class="faq-a"><p>Full refund within the first 14 days, before labs are processed. After that, you may pause once during the program for up to 30 days. Refunds after labs are processed are pro-rated minus direct lab costs incurred.</p></div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<section id="apply" class="apply">
-  <div class="container">
-    <span class="section-label" style="color:var(--accent-2)">Founding Cohort · 8–12 Spots</span>
-    <h2>Three steps to apply.</h2>
-    <p>Applications close when we hit cohort capacity. After that, the waitlist opens for cohort #2 at standard pricing.</p>
-
-    <div class="apply-cards">
-      <div class="apply-card">
-        <div class="step-num">1</div>
+<section id="apply">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Founding cohort · 8–12 spots</span>
+      <h2>Three steps to apply.</h2>
+      <p>Applications close when we hit cohort capacity. After that, the waitlist opens for the next cohort.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="snum">01</div>
         <h4>Application</h4>
-        <span>~10 minutes. Tells us your goals, history, and fit.</span>
+        <p>About ten minutes. Tells us your goals, history, and fit.</p>
       </div>
-      <div class="apply-card">
-        <div class="step-num">2</div>
+      <div class="step">
+        <div class="snum">02</div>
         <h4>Discovery call</h4>
-        <span>30-min conversation with our team. Mutual fit check.</span>
+        <p>A 30-minute conversation with our team, including program details. A mutual fit check.</p>
       </div>
-      <div class="apply-card">
-        <div class="step-num">3</div>
-        <h4>Clinical intake + onboarding</h4>
-        <span>If invited, complete intake forms and lab orders to begin.</span>
+      <div class="step">
+        <div class="snum">03</div>
+        <h4>Clinical intake &amp; onboarding</h4>
+        <p>If invited, complete intake forms and lab orders to begin.</p>
       </div>
     </div>
-
-    <div style="margin-top:3rem">
-      <a href="application.html" class="btn btn-primary" style="background:var(--accent);color:#fff;padding:1.1rem 2.5rem;font-size:1.05rem">Start your application →</a>
+    <div class="cta-band">
+      <div>
+        <h3>Ready to start?</h3>
+        <p>Founding cohort spots are limited to 8–12 participants.</p>
+      </div>
+      <a class="btn btn-primary" href="application.html">Start your application</a>
     </div>
 
-    <div style="margin-top:4rem;padding-top:3rem;border-top:1px solid rgba(255,255,255,.1)">
-      <h3 style="color:#f5f1ea;font-size:1.4rem">Not ready? Join the waitlist.</h3>
-      <p>Get the founder's note, behind-the-scenes content, and first access to cohort #2.</p>
-      <form class="waitlist-form" onsubmit="handleWaitlist(event)">
-        <input type="email" name="email" placeholder="your@email.com" required />
-        <button type="submit" class="btn">Join waitlist</button>
-      </form>
-      <div id="waitlist-msg" style="margin-top:1rem;font-size:.9rem;color:var(--accent-2)"></div>
+    <div class="waitlist">
+      <div>
+        <h4>Not ready? Join the waitlist.</h4>
+        <p>Get the founder's note, behind-the-scenes content, and first access to the next cohort.</p>
+      </div>
+      <a class="btn btn-ghost" href="#apply">Join waitlist</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="container">
+  <div class="wrap">
     <div class="foot-grid">
-      <div class="foot-col">
-        <div class="logo" style="margin-bottom:.7rem">ReviveWell</div>
-        <p style="font-size:.88rem;color:var(--ink-2);max-width:280px">Physician-led integrative wellness. Labs, peptides, and protocols — built around how the body actually works.</p>
+      <div>
+        <a class="brand" href="#">ReviveWell</a>
+        <p style="margin-top:14px;">Physician-led integrative wellness. Labs, peptides, and protocols — built around how the body actually works.</p>
       </div>
-      <div class="foot-col">
+      <div>
         <h5>Program</h5>
-        <a href="#program">How it works</a>
-        <a href="#pillars">The pillars</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
+        <ul>
+          <li><a href="#modules">The six modules</a></li>
+          <li><a href="#included">What's included</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
       </div>
-      <div class="foot-col">
+      <div>
         <h5>Apply</h5>
-        <a href="application.html">Application</a>
-        <a href="#apply">Waitlist</a>
-        <a href="mailto:info@revivewell.co">Contact</a>
-      </div>
-      <div class="foot-col">
-        <h5>Legal</h5>
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-        <a href="#">Disclaimers</a>
+        <ul>
+          <li><a href="application.html">Application</a></li>
+          <li><a href="#apply">Waitlist</a></li>
+          <li><a href="mailto:info@revivewell.co">Contact</a></li>
+        </ul>
       </div>
     </div>
-    <p class="disclaimer"><strong>Medical disclaimer:</strong> The information on this page is for educational purposes only and does not constitute medical advice. Statements about peptide therapy, supplements, and lab testing have not been evaluated by the FDA. The program does not diagnose, treat, cure, or prevent disease. Peptide prescriptions require physician evaluation and are dispensed through licensed compounding pharmacies. Individual results vary. Consult your healthcare provider before starting any new health protocol.</p>
-    <div class="foot-bottom">
-      <span>© 2026 ReviveWell. All rights reserved.</span>
-      <span>Founding Cohort · Limited to 8–12 participants</span>
+    <div class="disclaimer">
+      <strong>Medical disclaimer:</strong> The information on this page is for educational purposes only and does not constitute medical advice. Statements about peptide therapy, supplements, and lab testing have not been evaluated by the FDA. The program does not diagnose, treat, cure, or prevent disease. Peptide prescriptions require physician evaluation and are dispensed through licensed compounding pharmacies. Individual results vary. Consult your healthcare provider before starting any new health protocol.
     </div>
+    <div class="copyright">© 2026 ReviveWell. All rights reserved. Founding Cohort — limited to 8–12 participants.</div>
   </div>
 </footer>
 
 <script>
-  // Waitlist form handler — wire to email provider (ConvertKit, Klaviyo, etc.)
-  function handleWaitlist(e){
-    e.preventDefault();
-    const form = e.target;
-    const email = form.email.value;
-    const msg = document.getElementById('waitlist-msg');
-    // TODO: replace with actual email API endpoint (ConvertKit / Klaviyo)
-    // fetch('YOUR_FORM_ENDPOINT', { method:'POST', body: JSON.stringify({email}) })
-    msg.textContent = "You're on the list. Check your inbox for a confirmation.";
-    form.reset();
-  }
-
-  // Fade-in on scroll
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.15 });
-  document.querySelectorAll('section, .hero-grid > div').forEach(el => {
-    el.classList.add('fade-in');
-    io.observe(el);
+  // Mobile nav toggle
+  document.getElementById('menuToggle').addEventListener('click', function(){
+    document.getElementById('navLinks').classList.toggle('open');
   });
 
-  // Smooth-scroll anchors
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', (e) => {
-      const id = a.getAttribute('href').slice(1);
-      const target = document.getElementById(id);
-      if (target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); }
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var q = item.querySelector('.faq-q');
+    var a = item.querySelector('.faq-a');
+    q.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(openItem){
+        if(openItem !== item){
+          openItem.classList.remove('open');
+          openItem.querySelector('.faq-a').style.maxHeight = null;
+        }
+      });
+      if(isOpen){
+        item.classList.remove('open');
+        a.style.maxHeight = null;
+      } else {
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
     });
   });
 </script>
